@@ -34,5 +34,15 @@
         "color": "#ffffff",
         "icon" : "fa-question",
         "order": 3
+    },
+
+    {
+        "name": "Assignment",
+        "description": "View and Upload your assignments",
+        "descriptionParsed": "<p>View and Upload your assignments</p>\n",
+        "bgColor": "#DA70D6",
+        "color": "#ffffff",
+        "icon" : "fa-paperclip",
+        "order": 5
     }
 ]
