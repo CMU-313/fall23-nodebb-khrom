@@ -487,6 +487,26 @@ async function createWelcomePost() {
     }
 }
 
+async function createAssignmentPost() {
+    const db = require('./database');
+    const Topics = require('./topics');
+
+    const [content, numTopics] = await Promise.all([
+        fs.promises.readFile(path.join(__dirname, '../', 'install/data/welcome_assignments.md'), 'utf8'),
+        db.getObjectField('assignment', 'topicCount'), //Changed global to assignment (I think it's some sort of hashmap)
+    ]);
+
+    if (!parseInt(numTopics, 10)) {
+        console.log('Creating welcome post!');
+        await Topics.post({
+            uid: 1,
+            cid: 5,
+            title: 'Welcome to the Assignments tab!',
+            content: content,
+        });
+    }
+}
+
 async function enableDefaultPlugins() {
     console.log('Enabling default plugins');
 
@@ -577,6 +597,7 @@ install.setup = async function () {
         await giveGlobalPrivileges();
         await createMenuItems();
         await createWelcomePost();
+        await createAssignmentPost();
         await enableDefaultPlugins();
         await setCopyrightWidget();
         await copyFavicon();
