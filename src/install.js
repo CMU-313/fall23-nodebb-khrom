@@ -507,6 +507,26 @@ async function createAssignmentPost() {
     }
 }
 
+async function createAnnouncementPost() {
+    const db = require('./database');
+    const Topics = require('./topics');
+
+    const [content, numTopics] = await Promise.all([
+        fs.promises.readFile(path.join(__dirname, '../', 'install/data/welcome_announcements.md'), 'utf8'),
+        db.getObjectField('announcement', 'topicCount'), //Changed global to assignment (I think it's some sort of hashmap)
+    ]);
+
+    if (!parseInt(numTopics, 10)) {
+        console.log('Creating welcome post!');
+        await Topics.post({
+            uid: 1,
+            cid: 1,
+            title: 'Welcome to the Assignments tab!',
+            content: content,
+        });
+    }
+}
+
 async function enableDefaultPlugins() {
     console.log('Enabling default plugins');
 
