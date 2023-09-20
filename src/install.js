@@ -513,7 +513,7 @@ async function createAnnouncementPost() {
 
     const [content, numTopics] = await Promise.all([
         fs.promises.readFile(path.join(__dirname, '../', 'install/data/welcome_announcements.md'), 'utf8'),
-        db.getObjectField('announcement', 'topicCount'), //Changed global to assignment (I think it's some sort of hashmap)
+        db.getObjectField('announcement', 'topicCount'), //Changed announcement to assignment (I think it's some sort of hashmap)
     ]);
 
     if (!parseInt(numTopics, 10)) {
@@ -521,7 +521,27 @@ async function createAnnouncementPost() {
         await Topics.post({
             uid: 1,
             cid: 1,
-            title: 'Welcome to the Assignments tab!',
+            title: 'Welcome to the Announcements tab!',
+            content: content,
+        });
+    }
+}
+
+async function createCommentsPost() {
+    const db = require('./database');
+    const Topics = require('./topics');
+
+    const [content, numTopics] = await Promise.all([
+        fs.promises.readFile(path.join(__dirname, '../', 'install/data/welcome_comments.md'), 'utf8'),
+        db.getObjectField('comments', 'topicCount'), //Changed global to comments (I think it's some sort of hashmap)
+    ]);
+
+    if (!parseInt(numTopics, 10)) {
+        console.log('Creating welcome post!');
+        await Topics.post({
+            uid: 1,
+            cid: 4,
+            title: 'Welcome to the Comments and Feedback tab!',
             content: content,
         });
     }
@@ -618,6 +638,8 @@ install.setup = async function () {
         await createMenuItems();
         await createWelcomePost();
         await createAssignmentPost();
+        await createAnnouncementPost();
+        await createCommentsPost();
         await enableDefaultPlugins();
         await setCopyrightWidget();
         await copyFavicon();

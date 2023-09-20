@@ -1,4 +1,4 @@
-# Welcome to the announcements tab!
+# Welcome to the Announcements tab!
 
 You can click the "New Announcement" tab to get started. This allows you to make a new post to communicate with your students. 
 You can also view previous announcements and see what questions your students have.
