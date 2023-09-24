@@ -78,6 +78,7 @@
         <div class="write-container">
             <textarea class="write" tabindex="4" rows="3" cols="140 placeholder="Enter your comments here" dir="ltr"></textarea>
         </div>
+        
 
         {{{ if browsingUsers }}}
         <div class="visible-xs">
