@@ -75,6 +75,7 @@
             {{{end}}}
         </ul>
 
+
         {{{ if browsingUsers }}}
         <div class="visible-xs">
             <!-- IMPORT partials/topic/browsing-users.tpl -->
