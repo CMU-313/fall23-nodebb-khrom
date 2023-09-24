@@ -44,5 +44,15 @@
         "color": "#ffffff",
         "icon" : "fa-paperclip",
         "order": 5
+    },
+
+    {
+        "name": "Slides",
+        "description": "View and Upload your Slide Shows",
+        "descriptionParsed": "<p>View and Upload your Slide Shows</p>\n",
+        "bgColor": "#FED000",
+        "color": "#ffffff",
+        "icon" : "fa-tv",
+        "order": 6
     }
 ]
