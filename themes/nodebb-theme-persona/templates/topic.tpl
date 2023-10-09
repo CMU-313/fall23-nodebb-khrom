@@ -18,7 +18,6 @@
                     <span component="topic/title">{title}</span>
                 </span>
             </h1>
-
             <div class="topic-info clearfix">
                 <div class="category-item inline-block">
                     <div role="presentation" class="icon pull-left" style="{function.generateCategoryBackground, category}">
@@ -65,7 +64,6 @@
             {{{each posts}}}
                 <li component="post" class="{{{ if posts.deleted }}}deleted{{{ end }}} {{{ if posts.selfPost }}}self-post{{{ end }}} {{{ if posts.topicOwnerPost }}}topic-owner-post{{{ end }}}" <!-- IMPORT partials/data/topic.tpl -->>
                     <a component="post/anchor" data-index="{posts.index}" id="{posts.index}"></a>
-
                     <meta itemprop="datePublished" content="{posts.timestampISO}">
                     <meta itemprop="dateModified" content="{posts.editedISO}">
 
