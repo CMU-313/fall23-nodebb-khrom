@@ -6,8 +6,9 @@
         <span class="caret"></span>
     </button>
     <ul class="dropdown-menu pull-right">
+        {*button to create new assignment  in the assignments tab for Admin*}
         <li>
-            <a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary" data-ajaxify="false" role="button" style="background-color: white;">[[category:new_topic_button]]</a>
+            <a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary" data-ajaxify="false" role="button" style="background-color: white;">Create Assignment</a>
         </li>
         <li>
             <a component="topic/mark-unread-for-all" href="#">
