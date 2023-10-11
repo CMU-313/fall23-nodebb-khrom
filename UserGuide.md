@@ -43,5 +43,5 @@ Usage/User Testing: Only admin users should see the create assignments button. A
 
 ## Testing
 
-We added our tests to the following file: ./test/posts/uploads.js. We added our tests here because we mostly implemented front-end features which are often tested in this file. Our unit tests focus on ensuring whether our newly created categories have the correct category ID. We also focused a lot on visual and hands-on testing by user testing the front-end and checking for any unexpected behaviors.
+We added our tests to the following file: ./test/posts/uploads.js. We added our tests here because we mostly implemented front-end features which are often tested in this file. Our unit tests focus on ensuring whether our newly created categories have the correct category ID. We also focused a lot on visual and hands-on testing by user testing the front-end and checking for any unexpected behaviors. This test is sufficient because it checks the only change we made to the databse. We added two categories so we wanted to make sure that even with added categories the cids are still assignment correctly. 
 
