@@ -7,6 +7,9 @@
     </button>
     <ul class="dropdown-menu pull-right">
         <li>
+            <a href="{config.relative_path}/compose?cid={cid}" component="category/post" id="new_topic" class="btn btn-primary" data-ajaxify="false" role="button" style="background-color: white;">[[category:new_topic_button]]</a>
+        </li>
+        <li>
             <a component="topic/mark-unread-for-all" href="#">
                 <i class="fa fa-fw fa-inbox"></i> [[topic:thread_tools.markAsUnreadForAll]]
             </a>
