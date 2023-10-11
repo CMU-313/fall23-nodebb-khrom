@@ -63,12 +63,11 @@ describe('upload methods', () => {
     });
 
     it('should check that all cids are assigned to the correct value', () => {
-            assert(cid[1].name === "Announcements");
-            assert(cid[1].name === "General Discussion");
-            assert(cid[1].name === "Blogs");
-            assert(cid[1].name === "Comments & Feedback");
-            assert(cid[1].name === "Assignments");     
-            done();
+        assert(cid[1].name === 'Announcements');
+        assert(cid[1].name === 'General Discussion');
+        assert(cid[1].name === 'Blogs');
+        assert(cid[1].name === 'Comments & Feedback');
+        assert(cid[1].name === 'Assignments');
     });
 
     describe('.sync()', () => {
