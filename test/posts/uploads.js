@@ -62,6 +62,15 @@ describe('upload methods', () => {
         purgePid = purgePostData.postData.pid;
     });
 
+    it('should check that all cids are assigned to the correct value', () => {
+            assert(cid[1].name === "Announcements");
+            assert(cid[1].name === "General Discussion");
+            assert(cid[1].name === "Blogs");
+            assert(cid[1].name === "Comments & Feedback");
+            assert(cid[1].name === "Assignments");     
+            done();
+    });
+
     describe('.sync()', () => {
         it('should properly add new images to the post\'s zset', (done) => {
             posts.uploads.sync(pid, (err) => {
@@ -74,6 +83,8 @@ describe('upload methods', () => {
                 });
             });
         });
+
+
 
         it('should remove an image if it is edited out of the post', (done) => {
             async.series([

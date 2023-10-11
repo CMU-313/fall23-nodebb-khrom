@@ -21,6 +21,11 @@ define('forum/category', [
     Category.init = function () {
         const cid = ajaxify.data.cid;
 
+        const announcements = (cid==1)
+        console.log(cid);
+        console.log(typeof cid);
+        console.log("TESTING CID ASSIGNMENT");
+
         app.enterRoom('category_' + cid);
 
         share.addShareHandlers(ajaxify.data.name);
