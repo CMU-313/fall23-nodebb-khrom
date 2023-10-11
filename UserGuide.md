@@ -35,6 +35,12 @@ The welcome post and comment box should appear as follows:
 
 ![image info](images/welcome_comment.png)
 
+### Create Assignment Button Visible to Only Admin
+
+Description: Within the topic tools dropdown menu when you click into a category, we implemented a button called Create Assignment so admin (the Professor) can upload an assignment only students can make. The topic tools dropdown that has the create assignments button is only visible to admin (Professors), not students. We originally, wanted to change new topic button that is at the topic of each category page to only be shown on the admin page, however we could not figure out how to only show it on the admin page. So, as a workaround, we added the create assignment button to the topic tools since the permissions is already set to only admin.
+
+Usage/User Testing: Only admin users should see the create assignments button. Admin users click into a category, click topic tools, and the first button shown from the dropdown should be create assignment.
+
 ## Testing
 
 We added our tests to the following file: ./test/posts/uploads.js. We added our tests here because we mostly implemented front-end features which are often tested in this file. Our unit tests focus on ensuring whether our newly created categories have the correct category ID. We also focused a lot on visual and hands-on testing by user testing the front-end and checking for any unexpected behaviors.
