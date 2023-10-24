@@ -4551,7 +4551,7 @@
 *  update readme (9869064e)
 *  up node version to 10 (b39e0140)
 *  highlight privs row if group is added / navigating from group page (10e4ae62)
-*  prevent navigation away from groups page if changes are unsaved (53f6139b)
+*  prevent navigaton away from groups page if changes are unsaved (53f6139b)
 *  quick access dropdown on groups page to access privileges page (2c83278f)
 *  #8524, allow editing category of queued topic (844f2b4e)
 *  remove js-enabled (ff3c3435)
