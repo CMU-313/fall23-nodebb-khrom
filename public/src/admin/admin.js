@@ -1,10 +1,9 @@
 'use strict';
 
 require('../app');
-
 // scripts-admin.js contains javascript files
 // from plugins that add files to "acpScripts" block in plugin.json
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line import/no-unresolved    hello!
 require('../../scripts-admin');
 
 app.onDomReady();
