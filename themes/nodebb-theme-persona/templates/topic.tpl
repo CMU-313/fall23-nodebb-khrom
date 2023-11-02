@@ -77,6 +77,8 @@
             <textarea class="write" tabindex="4" rows="3" cols="140 placeholder="Enter your comments here" dir="ltr"></textarea>
         </div>
         
+        <button type="button">Submit Comment</button>
+
         {{{ if browsingUsers }}}
         <div class="visible-xs">
             <!-- IMPORT partials/topic/browsing-users.tpl -->
